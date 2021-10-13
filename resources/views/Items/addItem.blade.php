@@ -7,8 +7,9 @@
     <div class="conteiner">
     <h1>Add Item</h1>
     <br>
-    <form method="post" action="/saveCustomer">
+    <form method="post" action="/saveItem">
     @csrf
+    <input type="hidden" name="AdminID" value="{{Auth::user()->id}}" readonly>
     <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">

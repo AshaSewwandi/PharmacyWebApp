@@ -8,7 +8,7 @@
     <h1>Add Customer</h1>
     <br>
     <form method="post" action="/saveCustomer">
-    @csrf
+    {{csrf_field()}}
     <input type="hidden" name="AdminID" value="{{Auth::user()->id}}" readonly>
     <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>

@@ -123,7 +123,7 @@
                         </a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="/product/viewproduct">
+                        <a class="nav-link" href="/viewitem">
                           <span data-feather="shopping-cart"></span>
                             Items
                         </a>

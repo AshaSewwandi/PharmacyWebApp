@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use DB;
+use Illuminate\Support\Facades\DB;
 use App\Models\Item;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -39,7 +39,16 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $item=new Item;
+        $item->ItemID=$request->ItemID;
+        $item->Name=$request->Name;
+        $item->Brand=$request->Brand;
+        $item->Price=$request->Price;
+        $item->Quantity=$request->Quantity;
+        $item->AdminID=$request->AdminID;
+        $item->save();
+
+        return redirect('/viewitem');
     }
 
     /**
@@ -48,9 +57,12 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        $user = User::latest()->paginate();
+        $items = Item::latest()->paginate();
+    
+        return view('Items.viewItem',compact('items','user'));
     }
 
     /**
@@ -59,9 +71,10 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($ItemID)
     {
-        //
+        $item = Item::find($ItemID) ;
+        return view('Items.editItem')->with('items',$item);
     }
 
     /**
@@ -71,9 +84,27 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //dd($request->all());
+        $ItemID=$request->ItemID;
+        $Name=$request->Name;
+        $Brand=$request->Brand;
+        $Price=$request->Price;
+        $Quantity=$request->Quantity;
+
+        $item=Item::find($ItemID);
+
+        $item->Name=$Name;
+        $item->Brand=$Brand;
+        $item->Price=$Price;
+        $item->Quantity=$Quantity;
+
+        $item->save();
+
+        $items = Item::all();
+
+        return view('Items.viewItem')->with('items',$items);
     }
 
     /**
@@ -82,8 +113,12 @@ class ItemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($ItemID)
     {
-        //
+        $users =User::all();
+        $items = Item::find($ItemID);
+        $items->delete();
+
+        return redirect()->back();
     }
 }

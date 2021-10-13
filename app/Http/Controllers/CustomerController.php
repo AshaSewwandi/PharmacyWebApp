@@ -40,27 +40,18 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        //dd($request->all());
-        // $request->validate([
-        //     'Name' => 'required',
-        //     'Email' => 'required',
-        //     'Address' => 'required',
-        //     'Contact' => 'required',
-        //     'NIC' => 'required',
-
-        // ]);
-
-        $customer=new Customer;
-        $customer->CustomerID=$request->CustomerID;
-        $customer->Name=$request->Name;
-        $customer->NIC=$request->NIC;
-        $customer->Address=$request->Address;
-        $customer->Email=$request->Email;
-        $customer->MobileNo=$request->MobileNo;
-        $customer->AdminID=$request->AdminID;
-        $customer->save();
+        $customers=new Customer;
+        $customers->CustomerID=$request->CustomerID;
+        $customers->Name=$request->Name;
+        $customers->NIC=$request->NIC;
+        $customers->Address=$request->Address;
+        $customers->Email=$request->Email;
+        $customers->MobileNo=$request->MobileNo;
+        $customers->AdminID=$request->AdminID;
+        $customers->save();
     
-        return view('Customers.viewCustomer')->with('customers',$customer);
+        return redirect('/viewcustomer')-> with ('success','Customer Inserted successfully');
+        
     }
 
     /**

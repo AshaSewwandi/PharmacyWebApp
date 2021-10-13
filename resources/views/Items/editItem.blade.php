@@ -7,31 +7,31 @@
     <div class="conteiner">
     <h1>Edit Item</h1>
     <br>
-    <form method="post" action="/saveCustomer">
+    <form method="post" action="/saveItem">
     @csrf
+    <input type="hidden" name="ItemID" value="{{$items->ItemID}}" readonly>
     <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" name="Name" class="form-control" id="inputEmail3" value="">
+      <input type="text" name="Name" class="form-control" id="inputEmail3" value="{{$items->Name}}">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Brand</label>
     <div class="col-sm-10">
-      <input type="text" name="Brand" class="form-control" id="inputEmail3" value="">
+      <input type="text" name="Brand" class="form-control" id="inputEmail3" value="{{$items->Brand}}">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Price</label>
     <div class="col-sm-10">
-      <input type="text" name="Price" class="form-control" id="inputEmail3" value="">
+      <input type="text" name="Price" class="form-control" id="inputEmail3" value="{{$items->Price}}">
     </div>
-  </div>
   </div>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Quantity</label>
     <div class="col-sm-10">
-      <input type="text" name="Quantity" class="form-control" id="inputEmail3" value="">
+      <input type="text" name="Quantity" class="form-control" id="inputEmail3" value="{{$items->Quantity}}">
     </div>
   </div>
   

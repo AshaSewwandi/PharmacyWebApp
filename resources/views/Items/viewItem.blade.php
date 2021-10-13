@@ -23,8 +23,8 @@
                     <td scope="row">{{$item->Price}}</td>
                     <td scope="row">{{$item->Quantity}}</td>
                     <td>
-                        <button type= button class="btn btn-waring">Edit</button>
-                        <button type= button class="btn btn-danger">Delete</button>
+                        <button onclick="location.href='/editItem/{{$item->ItemID}}'" type= button class="btn btn-waring">Edit</button>
+                        <button onclick="location.href='/deleteItem/{{$item->ItemID}}'"type= button class="btn btn-danger">Delete</button>
                     </td>
                     </tr>
                     @endforeach

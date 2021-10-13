@@ -30,3 +30,7 @@ Route::get('/daletecustomer/{CustomerID}', [App\Http\Controllers\CustomerControl
 Route::get('/viewcustomer', [App\Http\Controllers\CustomerController::class, 'show']);
 
 Route::get('/Additem/{id}', [App\Http\Controllers\ItemController::class, 'create']);
+Route::post('/saveItem', [App\Http\Controllers\ItemController::class, 'store'])->name('/saveItem');
+Route::get('/viewitem', [App\Http\Controllers\ItemController::class, 'show']);
+Route::get('/editItem/{ItemID}', [App\Http\Controllers\ItemController::class, 'edit']);
+Route::get('/deleteItem/{ItemID}', [App\Http\Controllers\ItemController::class, 'destroy']);

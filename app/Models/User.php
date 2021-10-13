@@ -51,6 +51,11 @@ class User extends Authenticatable
         return $this->hasmany(Customer::class, 'CustomerID');
     }
 
+    public function item()
+    {
+        return $this->hasmany(Customer::class, 'ItemID');
+    }
+    
     public function roles()
     {
         return $this->belongsTo(Role::class, 'RoleID');
