@@ -1,0 +1,11 @@
+.conteiner{
+    width: 800px;
+    position:relative;
+    left:350px;
+    top:100px;
+    border: 2px solid #58a7f1;
+    padding:50px 50px 50px 50px;
+}
+h1{
+    color:#2a669e
+}

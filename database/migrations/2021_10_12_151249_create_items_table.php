@@ -18,6 +18,7 @@ class CreateItemsTable extends Migration
             $table->string('Name');
             $table->string('Brand');
             $table->string('Price');
+            $table->integer('Quantity');
             $table->unsignedBigInteger('AdminID');
             $table->foreign('AdminID')->references('id')->on('users');
             $table->timestamps();

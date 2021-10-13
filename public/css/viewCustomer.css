@@ -1,0 +1,9 @@
+.conteiner{
+    width: 1000px;
+    position:relative;
+    left:270px;
+    top:100px;
+}
+thead{
+    background-color:#77BFC7 ;
+}
