@@ -9,15 +9,19 @@ class Role extends Model
 {
     use HasFactory;
 
-    public function priviledges(){
-        return $this->belongsToMany(Priviledge::class, 'role_priviledges', 'ID', 'PriviledgeID')->withTimestamps();
-    }
-    
+    protected $primaryKey = 'RoleID';
+
+    public $sortable = ['RoleID', 'name'];
+
     public function users(){
         return $this->belongsToMany(User::class, 'users');
     }
 
-    protected $primaryKey = 'RoleID';
+    public function user(){
+        return $this->hasMany(User::class, 'id');
+    } 
 
-    public $sortable = ['RoleID', 'name'];
+    public function permission(){
+        return $this->hasMany(Priviledge::class, 'PriviledgeID');
+    }
 }

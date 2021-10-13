@@ -15,9 +15,11 @@ class CreatePriviledgesTable extends Migration
     {
         Schema::create('priviledges', function (Blueprint $table) {
             $table->bigIncrements('PriviledgeID');
+            $table->unsignedBigInteger('RoleID')->default(3);
             $table->string('Description');
+            $table->foreign('RoleID')->references('RoleID')->on('roles');
             $table->timestamps();
-            $table->softDeletes();
+            
         });
     }
 

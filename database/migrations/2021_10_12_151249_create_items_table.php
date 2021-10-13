@@ -22,7 +22,6 @@ class CreateItemsTable extends Migration
             $table->unsignedBigInteger('AdminID');
             $table->foreign('AdminID')->references('id')->on('users');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 

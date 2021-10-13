@@ -53,11 +53,11 @@ class User extends Authenticatable
 
     public function item()
     {
-        return $this->hasmany(Customer::class, 'ItemID');
+        return $this->hasmany(Item::class, 'ItemID');
     }
     
     public function roles()
     {
         return $this->belongsTo(Role::class, 'RoleID');
-    }
+    } 
 }

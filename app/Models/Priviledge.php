@@ -13,6 +13,6 @@ class Priviledge extends Model
 
     public function roles()
     {
-        return $this->belongsToMany(Role::class, 'role_priviledges', 'PriviledgeID', 'ID')->withTimestamps();
-    }
+        return $this->belongsTo(Role::class, 'RoleID');
+    } 
 }
