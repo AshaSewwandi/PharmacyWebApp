@@ -86,7 +86,6 @@ class ItemController extends Controller
      */
     public function update(Request $request)
     {
-        //dd($request->all());
         $ItemID=$request->ItemID;
         $Name=$request->Name;
         $Brand=$request->Brand;

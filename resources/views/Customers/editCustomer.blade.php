@@ -14,13 +14,13 @@
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" name="Name" class="form-control" id="inputEmail3" value="{{$customers->Name}}">
+      <input type="text" name="Name" class="form-control" id="Name" value="{{$customers->Name}}">
     </div>
   </div>
   <div class="form-group row">
     <label for="inputEmail3" class="col-sm-2 col-form-label">NIC</label>
     <div class="col-sm-10">
-      <input type="text" name="NIC" class="form-control" id="inputEmail3" value="{{$customers->NIC}}">
+      <input type="text" name="NIC" class="form-control" id="NIC" value="{{$customers->NIC}}">
     </div>
   </div>
   <div class="form-group row">

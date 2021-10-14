@@ -35,4 +35,4 @@ Route::post('/saveItem', [App\Http\Controllers\ItemController::class, 'store'])-
 Route::get('/viewitem', [App\Http\Controllers\ItemController::class, 'show']);
 Route::get('/editItem/{ItemID}', [App\Http\Controllers\ItemController::class, 'edit']);
 Route::get('/deleteItem/{ItemID}', [App\Http\Controllers\ItemController::class, 'destroy']);
-Route::post('/saveItem', [App\Http\Controllers\ItemController::class, 'update'])->name('/saveItem');
+Route::post('/editItem', [App\Http\Controllers\ItemController::class, 'update'])->name('/saveItem');

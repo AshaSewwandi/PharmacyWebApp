@@ -8,30 +8,30 @@
     <h1>Add Item</h1>
     <br>
     <form method="post" action="/saveItem">
-    @csrf
+    {{csrf_field()}}
     <input type="hidden" name="AdminID" value="{{Auth::user()->id}}" readonly>
-    <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+  <div class="form-group row">
+    <label for="Name" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" name="Name" class="form-control" id="inputEmail3" placeholder="Name">
+      <input type="text" name="Name" class="form-control" id="Name" placeholder="Name">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Brand</label>
+    <label for="Brand" class="col-sm-2 col-form-label">Brand</label>
     <div class="col-sm-10">
-      <input type="text" name="Brand" class="form-control" id="inputEmail3" placeholder="Brand">
+      <input type="text" name="Brand" class="form-control" id="Brand" placeholder="Brand">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Price</label>
+    <label for="Price" class="col-sm-2 col-form-label">Price</label>
     <div class="col-sm-10">
-      <input type="text" name="Price" class="form-control" id="inputEmail3" placeholder="Price">
+      <input type="text" name="Price" class="form-control" id="Price" placeholder="Price">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Quantity</label>
+    <label for="Quantity" class="col-sm-2 col-form-label">Quantity</label>
     <div class="col-sm-10">
-      <input type="text" name="Quantity" class="form-control" id="inputEmail3" placeholder="Quantity">
+      <input type="text" name="Quantity" class="form-control" id="Quantity" placeholder="Quantity">
     </div>
   </div>
   <br>
