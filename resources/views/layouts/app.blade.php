@@ -12,6 +12,42 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    <!-- //////////////////// -->
+    <script src="https://use.fontawesome.com/d690ff1854.js"></script>
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <style>
+        .a-link1{
+            position:relative;
+            left:50px;
+            bottom:65px;
+            font-size:30px;
+        }
+        .a-link2{
+            position:relative;
+            left:50px;
+            bottom:120px;
+            font-size:30px;
+        }
+        .icon2{
+            position:relative;
+            bottom:60px;
+        }
+        .a-link3{
+            position:relative;
+            left:50px;
+            bottom:175px;
+            font-size:30px;
+        }
+        .icon3{
+            position:relative;
+            bottom:110px;
+        }
+    </style>
+    
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -24,7 +60,8 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <!-- {{ config('app.name', 'Laravel') }} -->
+                    Pharmacy Web App
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

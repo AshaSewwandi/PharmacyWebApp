@@ -15,60 +15,60 @@
                     @endif
 
                     @if(Auth::user()->roles->name == 'Owner')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/Addcustomer/{{ Auth::user()->id }}">
-                          <span data-feather="compass"></span>
-                            Add Customer
-                        </a>
-                      </li>
+                    <div class="icon1">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                    </div>
+                    <div class="a-link1">
+                      <a class="nav-link" href="/Addcustomer/{{ Auth::user()->id }}">Add Customer</a>
+                    </div> 
                       @endif
                       @if(Auth::user()->roles->name == 'Owner')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/Additem/{{ Auth::user()->id }}">
-                          <span data-feather="compass"></span>
-                            Add Item
-                        </a>
-                      </li>
+                      <div class="icon2">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                      </div>
+                      <div class="a-link2">
+                      <a class="nav-link" href="/Additem/{{ Auth::user()->id }}"> Add Item</a>
+                      </div>
                       @endif
                       @if(Auth::user()->roles->name == 'Owner')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/viewitem">
-                          <span data-feather="compass"></span>
-                            View Item
-                        </a>
-                      </li>
+                      <div class="icon3">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                      </div>
+                      <div class="a-link3">
+                      <a class="nav-link" href="/viewitem">View Item</a>
+                      </div>
                       @endif
                       @if(Auth::user()->roles->name == 'Manager')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/viewcustomer">
-                          <span data-feather="compass"></span>
-                            View Customer
-                        </a>
-                      </li>
+                      <div class="icon1">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                      </div>
+                      <div class="a-link1">
+                      <a class="nav-link" href="/viewcustomer"> View Customer</a>
+                      </div>
                       @endif
                       @if(Auth::user()->roles->name == 'Manager')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/viewitem">
-                          <span data-feather="compass"></span>
-                            View Item
-                        </a>
-                      </li>
+                      <div class="icon2">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                      </div>
+                      <div class="a-link2">
+                      <a class="nav-link" href="/viewitem">View Item</a>
+                      </div>
                       @endif
                       @if(Auth::user()->roles->name == 'Cashier')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/viewitem">
-                          <span data-feather="compass"></span>
-                            View Item
-                        </a>
-                      </li>
+                      <div class="icon1">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                      </div>
+                      <div class="a-link1">
+                      <a class="nav-link" href="/viewitem">View Item</a>
+                      </div>
                       @endif
                       @if(Auth::user()->roles->name == 'Cashier')
-                      <li class="nav-item">
-                        <a class="nav-link" href="/viewcustomer">
-                          <span data-feather="compass"></span>
-                            View Customer
-                        </a>
-                      </li>
+                      <div class="icon2">
+                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
+                      </div>
+                      <div class="a-link2">
+                      <a class="nav-link" href="/viewcustomer">View Customer</a>
+                      </div>
                       @endif   
                 </div>
             </div>
