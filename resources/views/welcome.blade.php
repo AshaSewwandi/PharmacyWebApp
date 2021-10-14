@@ -20,7 +20,7 @@
             }
             div.project{
                 font-style: italic;
-                font-size: 80px;
+                font-size: 100px;
                 color: #77BFC7;
             }
         </style>

@@ -5,6 +5,7 @@
     </head>
     <body>
         <div class="conteiner">
+            <p>List of Items</p>
             <table class="table">
                 <thead>
                     <tr>
@@ -24,7 +25,7 @@
                     <td scope="row">{{$item->Quantity}}</td>
                     <td>
                     @if(Auth::user()->roles->name == 'Cashier')
-                        <button onclick="location.href='/editItem/{{$item->ItemID}}'" type= button class="btn btn-waring">Edit</button>
+                        <button onclick="location.href='/editItem/{{$item->ItemID}}'" type= button class="btn btn-warning">Edit</button>
                          &nbsp  &nbsp
                         <button onclick="location.href='/deleteItem/{{$item->ItemID}}'"type= button class="btn btn-danger">Delete</button>
                     @endif
