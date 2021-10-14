@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use App\Models\Customer;
 use App\Models\User;
-
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -50,8 +49,7 @@ class CustomerController extends Controller
         $customers->AdminID=$request->AdminID;
         $customers->save();
     
-        return redirect('/viewcustomer')-> with ('success','Customer Inserted successfully');
-        
+        return redirect('/viewcustomer')-> with ('success','Customer Inserted successfully');    
     }
 
     /**
@@ -124,8 +122,6 @@ class CustomerController extends Controller
         $customers = Customer::find($CustomerID) ;
         $customers->delete();
 
-        return redirect()->back();
-
-        //return view('Customers.viewCustomer',compact('customers','users'));
+        return redirect()->back()->with('success','Customer Deleted');
     }
 }

@@ -25,9 +25,9 @@
                     <td scope="row">{{$item->Quantity}}</td>
                     <td>
                     @if(Auth::user()->roles->name == 'Cashier')
-                        <button onclick="location.href='/editItem/{{$item->ItemID}}'" type= button class="btn btn-warning">Edit</button>
+                        <button onclick="return confirm('Are you sure you want to edit this item?');" type= button class="btn btn-warning"><a href="/editItem/{{$item->ItemID}}" >Edit</a></button>
                          &nbsp  &nbsp
-                        <button onclick="location.href='/deleteItem/{{$item->ItemID}}'"type= button class="btn btn-danger">Delete</button>
+                        <button onclick="return confirm('Are you sure you want to delete this item?');" type= button class="btn btn-danger"><a href="/deleteItem/{{$item->ItemID}}" >Delete</a></button>
                     @endif
                     </td>
                     </tr>

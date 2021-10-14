@@ -48,7 +48,7 @@ class ItemController extends Controller
         $item->AdminID=$request->AdminID;
         $item->save();
 
-        return redirect('/viewitem');
+        return redirect('/viewitem')->with('success','Item Added successfully');
     }
 
     /**
@@ -118,6 +118,6 @@ class ItemController extends Controller
         $items = Item::find($ItemID);
         $items->delete();
 
-        return redirect()->back();
+        return redirect()->back()->with('success','Item Deleted');
     }
 }

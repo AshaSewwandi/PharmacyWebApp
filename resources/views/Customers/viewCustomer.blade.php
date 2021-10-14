@@ -27,9 +27,9 @@
                     <td scope="row">{{$customer->MobileNo}}</td>
                     <td>
                     @if(Auth::user()->roles->name == 'Manager')
-                        <button onclick="location.href='/editcustomer/{{ $customer->CustomerID }}'" type= button class="btn btn-warning">Edit</button>
+                        <button onclick="return confirm('Are you sure you want to edit this customer?');" type= button class="btn btn-warning"><a href="/editcustomer/{{ $customer->CustomerID }}">Edit</a></button>
                         &nbsp &nbsp
-                        <button onclick="location.href='/daletecustomer/{{ $customer->CustomerID }}'" type= button class="btn btn-danger">Delete</button>
+                        <button onclick="return confirm('Are you sure you want to delete this customer?');" type= button class="btn btn-danger"><a href="/daletecustomer/{{ $customer->CustomerID }}">Delete</a></button>
                     @endif
                     </td>
                     </tr>
