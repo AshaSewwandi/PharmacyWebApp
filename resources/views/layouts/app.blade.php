@@ -11,8 +11,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
-    <!-- //////////////////// -->
     <script src="https://use.fontawesome.com/d690ff1854.js"></script>
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -34,16 +32,6 @@
         .icon2{
             position:relative;
             bottom:60px;
-        }
-        .a-link3{
-            position:relative;
-            left:50px;
-            bottom:175px;
-            font-size:30px;
-        }
-        .icon3{
-            position:relative;
-            bottom:110px;
         }
         b{
             color:#77BFC7;

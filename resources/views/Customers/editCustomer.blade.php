@@ -12,33 +12,33 @@
     
   <input type="hidden" name="CustomerID" value="{{$customers->CustomerID}}" readonly>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+    <label for="Name" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
       <input type="text" name="Name" class="form-control" id="Name" value="{{$customers->Name}}">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">NIC</label>
+    <label for="NIC" class="col-sm-2 col-form-label">NIC</label>
     <div class="col-sm-10">
       <input type="text" name="NIC" class="form-control" id="NIC" value="{{$customers->NIC}}">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="Email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" name="Email" class="form-control" id="inputEmail3" value="{{$customers->Email}}">
+      <input type="email" name="Email" class="form-control" id="Email" value="{{$customers->Email}}">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Address</label>
+    <label for="Address" class="col-sm-2 col-form-label">Address</label>
     <div class="col-sm-10">
-      <input type="text" name="Address" class="form-control" id="inputPassword3" value="{{$customers->Address}}">
+      <input type="text" name="Address" class="form-control" id="Address" value="{{$customers->Address}}">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Contact</label>
+    <label for="Address" class="col-sm-2 col-form-label">Contact</label>
     <div class="col-sm-10">
-      <input type="tel" name="MobileNo" class="form-control" id="inputPassword3" value="{{$customers->MobileNo}}">
+      <input type="tel" name="MobileNo" class="form-control" id="Address" value="{{$customers->MobileNo}}">
     </div>
   </div>
   <br>

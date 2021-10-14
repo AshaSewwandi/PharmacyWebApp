@@ -8,21 +8,11 @@ use Illuminate\Http\Request;
 
 class CustomerController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     { 
         return view('Customers.viewCustomer');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create(Request $request)
     {
         $customer = Customer::all();
@@ -31,12 +21,6 @@ class CustomerController extends Controller
         return view('Customers.addCustomer', compact('customer','user'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $customers=new Customer;
@@ -52,12 +36,6 @@ class CustomerController extends Controller
         return redirect('/viewcustomer')-> with ('success','Customer Inserted successfully');    
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show()
     {
        $user = User::latest()->paginate();
@@ -66,12 +44,6 @@ class CustomerController extends Controller
        return view('Customers.viewCustomer',compact('customers','user'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($CustomerID)
     {
         $customer = Customer::find($CustomerID) ;
@@ -79,13 +51,6 @@ class CustomerController extends Controller
 
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request)
     {
         $CustomerID=$request->CustomerID;
@@ -110,12 +75,6 @@ class CustomerController extends Controller
         return view('Customers.viewCustomer')->with('customers',$customers);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($CustomerID)
     {
         $users =User::all();

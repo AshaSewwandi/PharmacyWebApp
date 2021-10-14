@@ -11,33 +11,33 @@
     {{csrf_field()}}
     <input type="hidden" name="AdminID" value="{{Auth::user()->id}}" readonly>
     <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+    <label for="Name" class="col-sm-2 col-form-label">Name</label>
     <div class="col-sm-10">
-      <input type="text" name="Name" class="form-control" id="inputEmail3" placeholder="Name">
+      <input type="text" name="Name" class="form-control" id="Name" placeholder="Name">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">NIC</label>
+    <label for="NIC" class="col-sm-2 col-form-label">NIC</label>
     <div class="col-sm-10">
-      <input type="text" name="NIC" class="form-control" id="inputEmail3" placeholder="NIC">
+      <input type="text" name="NIC" class="form-control" id="NIC" placeholder="NIC">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+    <label for="Email" class="col-sm-2 col-form-label">Email</label>
     <div class="col-sm-10">
-      <input type="email" name="Email" class="form-control" id="inputEmail3" placeholder="Email">
+      <input type="email" name="Email" class="form-control" id="Email" placeholder="Email">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Address</label>
+    <label for="Address" class="col-sm-2 col-form-label">Address</label>
     <div class="col-sm-10">
-      <input type="text" name="Address" class="form-control" id="inputPassword3" placeholder="Address">
+      <input type="text" name="Address" class="form-control" id="Address" placeholder="Address">
     </div>
   </div>
   <div class="form-group row">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Contact</label>
+    <label for="MobileNo" class="col-sm-2 col-form-label">Contact</label>
     <div class="col-sm-10">
-      <input type="tel" name="MobileNo" class="form-control" id="inputPassword3" placeholder="Contact Number">
+      <input type="tel" name="MobileNo" class="form-control" id="MobileNo" placeholder="Contact Number">
     </div>
   </div>
   <br>

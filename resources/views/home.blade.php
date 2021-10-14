@@ -30,14 +30,6 @@
                       <a class="nav-link" href="/Additem/{{ Auth::user()->id }}"> Add Item</a>
                       </div>
                       @endif
-                      @if(Auth::user()->roles->name == 'Owner')
-                      <div class="icon3">
-                      <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
-                      </div>
-                      <div class="a-link3">
-                      <a class="nav-link" href="/viewitem">View Item</a>
-                      </div>
-                      @endif
                       @if(Auth::user()->roles->name == 'Manager')
                       <div class="icon1">
                       <i class="material-icons" style="font-size:50px; color:dodgerblue;">all_inclusive</i>
