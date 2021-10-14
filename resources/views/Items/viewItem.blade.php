@@ -23,8 +23,10 @@
                     <td scope="row">{{$item->Price}}</td>
                     <td scope="row">{{$item->Quantity}}</td>
                     <td>
+                    @if(Auth::user()->roles->name == 'Cashier')
                         <button onclick="location.href='/editItem/{{$item->ItemID}}'" type= button class="btn btn-waring">Edit</button>
                         <button onclick="location.href='/deleteItem/{{$item->ItemID}}'"type= button class="btn btn-danger">Delete</button>
+                    @endif
                     </td>
                     </tr>
                     @endforeach

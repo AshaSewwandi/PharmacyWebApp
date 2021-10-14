@@ -21,7 +21,7 @@ class Role extends Model
         return $this->hasMany(User::class, 'id');
     } 
 
-    public function permission(){
+    public function priviledges(){
         return $this->hasMany(Priviledge::class, 'PriviledgeID');
     }
 }

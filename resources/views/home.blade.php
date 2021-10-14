@@ -14,16 +14,62 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
-                    <br><br>
-
-                    <a href="/Addcustomer/{{ Auth::user()->id }}" >Add Customer</a>
-                    <br>
-                    <a href="/viewcustomer" >Customers</a>
-                    <br>
-                    <a href="/Additem/{{ Auth::user()->id }}" > Add Items</a>
-                    <br>
-                    <a href="/viewitem" >Items</a>
+                    @if(Auth::user()->roles->name == 'Owner')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/Addcustomer/{{ Auth::user()->id }}">
+                          <span data-feather="compass"></span>
+                            Add Customer
+                        </a>
+                      </li>
+                      @endif
+                      @if(Auth::user()->roles->name == 'Owner')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/Additem/{{ Auth::user()->id }}">
+                          <span data-feather="compass"></span>
+                            Add Item
+                        </a>
+                      </li>
+                      @endif
+                      @if(Auth::user()->roles->name == 'Owner')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/viewitem">
+                          <span data-feather="compass"></span>
+                            View Item
+                        </a>
+                      </li>
+                      @endif
+                      @if(Auth::user()->roles->name == 'Manager')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/viewcustomer">
+                          <span data-feather="compass"></span>
+                            View Customer
+                        </a>
+                      </li>
+                      @endif
+                      @if(Auth::user()->roles->name == 'Manager')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/viewitem">
+                          <span data-feather="compass"></span>
+                            View Item
+                        </a>
+                      </li>
+                      @endif
+                      @if(Auth::user()->roles->name == 'Cashier')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/viewitem">
+                          <span data-feather="compass"></span>
+                            View Item
+                        </a>
+                      </li>
+                      @endif
+                      @if(Auth::user()->roles->name == 'Cashier')
+                      <li class="nav-item">
+                        <a class="nav-link" href="/viewcustomer">
+                          <span data-feather="compass"></span>
+                            View Customer
+                        </a>
+                      </li>
+                      @endif   
                 </div>
             </div>
         </div>
